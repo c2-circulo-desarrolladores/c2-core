@@ -1,0 +1,30 @@
+name-template: 'v$RESOLVED_VERSION'
+tag-template: 'v$RESOLVED_VERSION'
+tag-prefix: v
+
+version-resolver:
+  default: patch
+
+categories:
+  - title: '✨ Nuevas secciones / páginas'
+    labels:
+      - feature
+      - new-page
+  - title: '📖 Cambios en documentación'
+    labels:
+      - documentation
+      - docs
+  - title: '🛠️ Mejoras internas (tema, estructura, config)'
+    labels:
+      - internal
+      - refactor
+      - chore
+
+change-template: '- $TITLE (#$NUMBER) @$AUTHOR'
+
+template: |
+  ## ¿Qué cambió en esta versión?
+
+  $CHANGES
+
+  ---

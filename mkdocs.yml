@@ -1,0 +1,82 @@
+site_name: C2 - Círculo de Desarrolladores Open Source
+site_url: https://mydomain.org/landing
+theme:
+  features:
+    - content.code.copy
+    - content.code.annotate        # anotaciones en código tipo callouts
+    - navigation.tabs              # tabs en la barra superior para secciones principales
+    - navigation.tabs.sticky       # tabs fijos al hacer scroll
+    - navigation.sections          # expande secciones en el sidebar
+    - navigation.expand            # sidebar expandido por defecto
+    - navigation.path              # breadcrumbs arriba de cada página
+    - navigation.top               # botón "volver arriba"
+    - navigation.indexes           # usa index.md como página de cada sección
+    - search.highlight             # resalta términos buscados en la página
+    - search.suggest               # autocompletado en búsqueda
+    - toc.follow                   # el TOC lateral sigue el scroll
+  name: material
+  font:
+    text: Montserrat
+    code: JetBrains Mono 
+  palette:
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: amber
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.superfences
+  - pymdownx.tabbed:              # tabs dentro del contenido (ej: Python / R)
+      alternate_style: true
+  - pymdownx.details              # bloques colapsables (??? note)
+  - pymdownx.emoji:               # íconos :material-check: dentro del texto
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition                    # cajas tipo !!! note, !!! warning
+  - toc:
+      permalink: true             # ancla # en cada título
+      title: Contenido
+  - attr_list                     # clases CSS en elementos Markdown
+  - md_in_html                    # Markdown dentro de HTML
+  - tables
+
+# Navigation
+nav:
+  - "Inicio": "index.md"
+  - "Nosotros":
+      - "Manifiesto": "nosotros/manifiesto.md"
+      - "Gobernanza": "nosotros/governanza.md"
+  - "Proyectos":
+      - "Index": "proyectos/index.md"
+      - "Consulta amigable": "proyectos/consulta_amigable.md"
+      - "INEI": "proyectos/inei.md"
+      - "SEACE": "proyectos/seace.md"
+      - "SUNAT": "proyectos/sunat.md"
+  - "Operaciones":
+      - "Index": "operaciones/index.md"
+      - "Codigo":
+          - "Guía estilo Python": "operaciones/codigo/guia_estilo_python.md"
+          - "Guía diseño librerías": "operaciones/codigo/guia_estilo_librerias.md"
+          - "Buenas prácticas": "operaciones/codigo/buenas_practicas.md"
+          - "Extensiones": "operaciones/codigo/extensiones.md"
+          - "uv": "operaciones/codigo/uv.md"
+      - "Colaboración":
+          - "Configurar Git": "operaciones/colaboracion/git_config.md"
+          - "Workflow de Git": "operaciones/colaboracion/git_workflow.md"
+          - "pre-commit": "operaciones/colaboracion/pre_commit.md"
+      - "Mantenimiento":
+          - "CI/CD Workflows": "operaciones/mantenimiento/ci_cd_workflows.md"
+          - "Versionamiento": "operaciones/mantenimiento/versionamiento.md"
+  # - "Plantillas":
+  #     - "Fundamentals": "plantillas/fundamentals.md"
+  #     - "PERFIL": "plantillas/PERFIL.md"
+  #     - "README Template": "plantillas/README_TEMPLATE.md"
+  #     - "README Template (Simplified)": "plantillas/README_TEMPLATE_SIMPLIFIED.md"
+
+extra_css:
+  - stylesheets/extra.css

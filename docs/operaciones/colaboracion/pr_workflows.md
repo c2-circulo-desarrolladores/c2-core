@@ -1,0 +1,21 @@
+
+
+
+```yaml
+name: Lint
+
+on:
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  ruff-format:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Chequear formato
+        run: uvx ruff format --check .
+```
