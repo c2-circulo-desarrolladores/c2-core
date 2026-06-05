@@ -84,54 +84,9 @@ Si te equivocaste en el mensaje de tu último commit y no lo has pusheado aún, 
 ```shell
 git commit -a -m "Nuevo mensaje"
 ```
-### Restablecer a una versión anterior
-Si hiciste un commit y aún no lo pusheas, puedes restablecer a una versión anterior.
+### Traer de vuelta un commit enviado 
+Si hiciste push a un commit, puedes regresarlo al área de preparación con el siguiente comando:
 
 ```shell
-git commit -a -m "Nuevo mensaje"
+git reset --soft HEAD~1
 ```
-
-## Workflow colaborativo
-
-- Inicializar 
-    - git init
-
-- Clonar
-    - git clone [url_del_repo]
-
-- Subir cambios
-    - git status
-    - git switch -c [rama] / git checkout -b [rama]
-    - git add [ruta]
-    - git restore --staged [ruta] (quitar de staging area si no se quiere subir)
-    - git commit -m [mensaje]
-    - git commit --amend -m [mensaje] (corregir el mensaje anterior)
-    - git push
-    - Ir al enlace para generar la pull request
-    - git switch main / git checkout main
-
-
-- Actualizar repo
-    - git pull [repo] [branch] --rebase
-    - git fetch [repo]
-  
-
-
-## Discusión
-
-- Fork o clone?
-- Nunca pushear a main
-- PRs al Product Owner
-
-
-Otros "sistemas" de control de versiones y las razones por las que no las usamos:
-
-- Local: Cada usuario tiene un archivo en su máquina. Para colaborar, le envía una copia de ese archivo a otro usuario.
-  - Desventajas:
-    - Si dos personas hacen cambios sobre el mismo archivo y se lo comparten, alguien debe "juntar" los cambios en uno.
-    - Muchas copias o versiones de un mismo archivo (version_final, version_final_final, etc).
-    
-- Collab/Onedrive: Todos acceden al mismo documento en línea, y los cambios son en tiempo real. Guarda un historial de cambios cada cierto tiempo.
-  - Desventajas: 
-    - Un pequeño cambio puede hacer que el código deje de funcionar para otros usuarios.
-    - No hay control total del historial de cambios.

@@ -7,7 +7,7 @@ Los siguientes comandos se ejecutan en una terminal. Puedes utilizar, por ejempl
 ![Terminal en VSCode](../../_images/git_terminal_vscode.png)
 
 ## Configuración inicial
-### 1: Configuración de Git
+### Configuración de Git
 
 Si es tu primera vez utilizando git, deberás establecer el nombre del usuario y el correo (vinculado a GitHub).
 
