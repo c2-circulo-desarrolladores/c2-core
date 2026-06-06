@@ -8,7 +8,9 @@ https://github.com/matplotlib/matplotlib/blob/main/.github/workflows/tests.yml
 ## Update docs
 https://github.com/pydantic/pydantic/blob/main/.github/workflows/docs-update.yml
 
-## Linter
+## Format checking
+
+format_check.yml
 
 ```yaml
 name: Lint
@@ -28,3 +30,7 @@ jobs:
       - name: Chequear formato
         run: uvx ruff format --check .
 ```
+
+## Issue Templates
+
+## Pull Request Templates
