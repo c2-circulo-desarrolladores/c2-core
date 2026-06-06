@@ -1,12 +1,9 @@
 # Proyectos
 
-Esta sección contiene 
+Esta sección contiene propuestas de proyectos
 
-<!-- | Tema | Descripción |
-|---|---|
-| [git](./git.md) | Flujo y comandos de Git |
-| [uv](./uv.md) | Gestión de dependencias con UV | -->
+- [inei](./inei.md) 
+- [seace](./seace.md) 
+- [consulta_amigable](./consulta_amigable.md) 
+- [sunat](./sunat.md) 
 
-## Web Scraping MEF
-## ubigeos_peru
-##

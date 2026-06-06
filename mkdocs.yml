@@ -68,9 +68,10 @@ nav:
       - "Colaboración":
           - "Configurar Git": "operaciones/colaboracion/git_config.md"
           - "Workflow de Git": "operaciones/colaboracion/git_workflow.md"
-          - "pre-commit": "operaciones/colaboracion/pre_commit.md"
+          - "Github": "operaciones/colaboracion/github.md"
       - "Mantenimiento":
-          - "CI/CD Workflows": "operaciones/mantenimiento/ci_cd_workflows.md"
+          - "Github Actions": "operaciones/mantenimiento/github_actions.md"
+          - "Release Drafter": "operaciones/mantenimiento/release_drafter.md"
           - "Versionamiento": "operaciones/mantenimiento/versionamiento.md"
   # - "Plantillas":
   #     - "Fundamentals": "plantillas/fundamentals.md"

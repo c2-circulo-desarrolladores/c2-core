@@ -2,21 +2,24 @@
 
 ## Introduccion
 
-Basado en el [Zen de Python](https://en.wikipedia.org/wiki/Zen_of_Python)
+Basado en el [Zen de Python](https://en.wikipedia.org/wiki/Zen_of_Python) y otras convenciones del Open Source.
 
 ## Nomenclatura
 
 ### Nombres de archivos
-#### General
+
+Sigue las siguientes recomendaciones:
+
 - No caracteres especiales (tildes, ñ, $%&/=?¡!*)
 - No mayúscula
 - No espacios
-- Nombre descriptivos, 
+- Nombre descriptivos
 - Nombres cortos, no más de 2-3 palabras
-#### Python
-En Python no es posible importar archivos (módulos) si tienen lo siguiente:
+
+Adicionalmente, En Python no es posible importar archivos (módulos) si su nombre contiene lo siguiente:  
+
 - Guiones medios
-- Números al principio 
+- Números al principio
 
 ```py
 from mi-modulo import main # <- No funciona
@@ -24,24 +27,21 @@ from 1modulo import main # <- Tampoco
 from mi_modulo import main # <- Este sí
 ```
 
-#### Otros
-- Archivos .md por convención van en mayúscula
-
 ### Nombres de variables
-#### Variables generales
+#### Variables asignadas
 - Sustantivos
 - Énfasis en poner nombres cortos y descriptivos (no x)
 - No sobreescribir palabras reservadas (from, import, as, def, class, return, try, except, yield...).
 
-```python
+```py
 x = limpiar_caracteres() # -> Qué es x?
 correo_limpio = limpiar_caracteres() # -> Más intuitivo
-import = limpiar_caracteres() # -> Palabra reservada
 ```
 
 #### Funciones
-- Minúscula y guiones medios
 - Verbos o acciones
+- Minúscula
+- Guiones bajos en lugar de espacios
 
 ```python
 def limpiar_caracteres() # -> Bien
@@ -49,9 +49,10 @@ def limpiar_caracteres() # -> Bien
 def limpiador_de_caracteres() # -> Por favor no
     ...
 ```
+
 #### Clases
-- Van en PascalCase
 - Sustantivos (no verbos!)
+- Van en PascalCase
 
 ```python
 class MiObjeto
@@ -70,13 +71,13 @@ Necesitas tener instalada la extensión de Ruff.
     },
 ```
 
-Con esta configuración, al guardar un archivo, Ruff "formateará el código" de la siguiente forma:
+Con esta configuración, al guardar un archivo, Ruff **formateará tu código** de la siguiente forma:
 
-- Quitará el espacio de los argumentos de funciones.
-- Limitará tu código a una longitud de 80 líneas, y aplicará espacios de ser necesario
+- Quitará el espacio adicional de los argumentos de funciones.
+- Limitará tu código a una longitud de 80 líneas, y aplicará espacios de ser necesario.
 - Reemplazará TABs por espacios.
-- Quitará espacios innecesarios
-- Entre otros.
+- Quitará espacios innecesarios.
+- Entre otros...
 
 
 ### Type hints
