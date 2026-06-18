@@ -13,14 +13,14 @@ https://github.com/pydantic/pydantic/blob/main/.github/workflows/docs-update.yml
 format_check.yml
 
 ```yaml
-name: Lint
+name: Check format
 
 on:
   pull_request:
     branches: ["main"]
 
 jobs:
-  ruff-format:
+  ruff-check:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -29,6 +29,26 @@ jobs:
 
       - name: Chequear formato
         run: uvx ruff format --check .
+
+  isort-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Chequear orden imports
+        run: uvx isort -c .
+  
+  autoflake-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Chequear imports sin usar
+        run: uvx autoflake --check --remove-unused-variables --remove-all-unused-imports -r . --exclude "__init__.py"
 ```
 
 ## Issue Templates
