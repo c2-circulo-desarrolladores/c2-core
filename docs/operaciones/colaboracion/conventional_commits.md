@@ -13,6 +13,7 @@ Tiene como fin de crear un historial de commits explícito y sencillo de leer, a
 | 🐛 **fix** | Corrección de un error o comportamiento incorrecto existente. | `fix(api): prevent null panic` |
 | ⚠️ **!** | Cambio incompatible (breaking change). Indica que la modificación rompe compatibilidad con versiones anteriores y puede requerir ajustes por parte de quienes usan el proyecto. | `feat!: redesign authentication API` |
 | 🧹 **chore** | Tareas de mantenimiento que no afectan directamente la funcionalidad del sistema. Incluye cambios en dependencias, configuración, herramientas de desarrollo, scripts, CI/CD o limpieza del repositorio. | `chore(ci): update GitHub Actions` |
+| 🎨 **style** | Cambios relacionados con formato, estilo o presentación del código que no modifican su lógica ni comportamiento. Incluye ajustes de indentación, espacios, saltos de línea, ordenamiento de imports, formateo automático y convenciones de estilo. | `style(api): format code with ruff` |
 | ♻️ **refactor** | Reestructuración o mejora interna del código sin modificar su comportamiento observable. No agrega funcionalidades ni corrige errores. | `refactor(parser): simplify validation logic` |
 | 🧪 **test** | Adición, modificación o eliminación de pruebas automatizadas. No cambia el comportamiento del producto. | `test(auth): add login tests` |
 | 📚 **docs** | Cambios únicamente en documentación, comentarios, guías, README, manuales o material de referencia. | `docs(readme): update installation guide` |
