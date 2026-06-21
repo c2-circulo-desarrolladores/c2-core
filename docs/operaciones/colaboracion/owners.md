@@ -4,8 +4,8 @@
 - Responsabilidades de owners
 - codeowners dentro de .github
 - Permisos y reglas (no push a main a menos que el owner dé review)-->
-# Owners
-Los owners de un proyecto se deciden de antemano a través del círculo, y se formalizan mediante el archivo .github/CODEOWNERS
+- 
+Los owners de un proyecto se deciden de antemano a través del círculo, y se formalizan mediante el archivo `.github/CODEOWNERS`.
 
 ## CODEOWNERS
 
@@ -26,7 +26,7 @@ Los owners son responsables de:
 
 El archivo suele ubicarse en:
 
-.github/CODEOWNERS
+`.github/CODEOWNERS`
 
 ### Ejemplos
 
