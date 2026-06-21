@@ -82,6 +82,9 @@ nav:
 extra_css:
   - stylesheets/extra.css
 
+extra_javascript:
+  - javascripts/hero-fade.js
+
 extra:
   analytics:
     provider: google
