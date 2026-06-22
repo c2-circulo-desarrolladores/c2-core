@@ -1,3 +1,9 @@
+## v0.3.2 (2026-06-22)
+
+### Fix
+
+- **index**: Corregir hipervínculo de página principal
+
 ## v0.3.1 (2026-06-22)
 
 ### Fix
