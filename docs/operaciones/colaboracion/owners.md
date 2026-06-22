@@ -15,7 +15,7 @@ El círculo puede co-mantener con el owner, proponer cambios de dirección o asu
 - Seguir y hacer cumplir el workflow de colaboración en su repositorio:
   - No hacer push directo a `main`.
   - Seguir el [workflow de colaboración de Git](git_workflow.md)
-  - Seguir el [workflow de Github](github.md)
+  - Seguir el [workflow de Github](github_workflow.md)
   - Seguir [conventional commits](conventional_commits.md)
   
 ## CODEOWNERS
