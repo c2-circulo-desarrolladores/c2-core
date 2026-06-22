@@ -245,7 +245,7 @@
   gap: 2rem;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 3.5rem 0;
+  margin: 2rem 0;
 }
 
 .mv-block {
@@ -282,8 +282,8 @@
 }
 
 .mv-icon {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
   display: inline-block;
   filter: drop-shadow(0 0 10px rgba(179, 19, 44, 0.5));
 }
@@ -296,5 +296,15 @@
   border: none;
 }
 
+.mv-block {
+  padding: 1.5rem 1.5rem;
+}
+
 .mv-block h2::after {
   content: "";
+}
+
+.md-button {
+  font-size: 1rem;
+  padding: 0.6em 1.5em;
+}

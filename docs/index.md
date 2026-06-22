@@ -11,6 +11,9 @@ hide:
 # C2 - Círculo de Desarrolladores Open Source
 
 Desarrollamos, colaboramos y mantenemos librerías Open Source para el ecosistema peruano.
+
+[Conoce el círculo](manifiesto.md){ .md-button .md-button--primary }
+[Ver en GitHub](https://github.com/c2-circulo-desarrolladores/c2-core){ .md-button }
 </div>
 
 <div class="mision-vision" markdown>
@@ -18,20 +21,21 @@ Desarrollamos, colaboramos y mantenemos librerías Open Source para el ecosistem
 
 <span class="mv-icon">🔭</span>
 
-## Visión
+## Misión
 
-Promover una **cultura de colaboración** y Open Source en el Perú donde compartir conocimiento y construir software de forma colectiva sea habitual y reconocido.
+Desarrollar **librerías de Python** que faciliten el acceso a fuentes de datos peruanas, automaticen flujos de trabajo en investigación y promuevan buenas prácticas en el desarrollo de software.
 
 </div>
 <div class="mv-block" markdown>
-
 <span class="mv-icon">🎯</span>
 
-## Misión
+## Visión
 
-Desarrollar, colaborar y mantener **librerías Open Source de Python** para el ecosistema peruano.
+Ser un **referente** en el desarrollo de **software Open Source en el Perú**: con un ecosistema de librerías mantenidas colectivamente, estándares técnicos altos, y de utilidad real para desarrolladores, investigadores e instituciones.
+
 
 </div>
+
 </div>
 
 ## Nuestros proyectos
