@@ -57,10 +57,12 @@ nav:
       - "INEI": "proyectos/inei.md"
       - "SEACE": "proyectos/seace.md"
       - "SUNAT": "proyectos/sunat.md"
+      - "BCRP": "proyectos/bcrp.md"
   - "Operaciones":
       - "Index": "operaciones/index.md"
       - "Codigo":
           - "Guía estilo Python": "operaciones/codigo/guia_estilo_python.md"
+          - "Guía clases Python": "operaciones/codigo/guia_oop_python.md"
           - "Guía diseño librerías": "operaciones/codigo/guia_estilo_librerias.md"
           - "Buenas prácticas": "operaciones/codigo/buenas_practicas.md"
           - "Extensiones": "operaciones/codigo/extensiones.md"
@@ -68,11 +70,14 @@ nav:
       - "Colaboración":
           - "Configurar Git": "operaciones/colaboracion/git_config.md"
           - "Workflow de Git": "operaciones/colaboracion/git_workflow.md"
-          - "Github": "operaciones/colaboracion/github.md"
+          - "Workflow de Github": "operaciones/colaboracion/github_workflow.md"
+          - "Conventional Commits": "operaciones/colaboracion/conventional_commits.md"
+          - "Owners": "operaciones/colaboracion/owners.md"
       - "Mantenimiento":
           - "Github Actions": "operaciones/mantenimiento/github_actions.md"
           - "Release Drafter": "operaciones/mantenimiento/release_drafter.md"
           - "Versionamiento": "operaciones/mantenimiento/versionamiento.md"
+          - "Tests": "operaciones/mantenimiento/tests.md"
   # - "Plantillas":
   #     - "Fundamentals": "plantillas/fundamentals.md"
   #     - "PERFIL": "plantillas/PERFIL.md"
@@ -81,6 +86,9 @@ nav:
 
 extra_css:
   - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/hero-fade.js
 
 extra:
   analytics:

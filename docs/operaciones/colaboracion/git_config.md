@@ -26,7 +26,7 @@ Iniciar la carpeta actual como repositorio.
 ```shell
 git init
 ```
-Luego de [crear tu repositorio en Github](../colaboracion/github.md), ejecuta este comando para vincular tu repositorio local con el repositorio remoto.
+Luego de [crear tu repositorio en Github](../colaboracion/github_workflow.md), ejecuta este comando para vincular tu repositorio local con el repositorio remoto.
 
 ```shell
 git remote add origin https://github.com/tu-usuario/nombre-del-repositorio.git

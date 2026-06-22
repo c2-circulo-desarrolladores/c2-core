@@ -1,5 +1,8 @@
 # Extensiones
 
+Revisar con el círculo
+
+
 ## Obligatorias
 - Markdown Language Features (md preview)
 - Ruff

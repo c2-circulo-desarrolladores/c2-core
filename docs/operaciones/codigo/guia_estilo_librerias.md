@@ -2,7 +2,10 @@
 
 ## Diseño
 
+Ponerles como green si es deseado, amarillo si puede ser, rojo si se desalienta
 Pensar en los siguientes puntos.
+
+Hablar del __init__.py
 
 ### ¿Cómo quiero que se importe mi librería? 
 
@@ -21,8 +24,10 @@ df = pd.DataFrame(mi_objeto)
 ```
 
 #### Importar funciones u objetos específicos
-Permitir que el usuario importe lo que necesite. Conveniente
-si no hay muchas funciones o clases por memorizar.
+Permitir que el usuario importe lo que necesite. 
+Conveniente si no hay muchas funciones o clases por memorizar, y
+permite que el usuario no deba repetir el diminutivo cada vez que 
+quiera utilizar la librería
 
 ```py
 from sqlalchemy import Column, String, Integer, create_engine
@@ -46,6 +51,7 @@ def root():
     return {"msg": "hola"}
 ```
 
+#### Importar desde submódulos específicos
 !!! warning
     **Evita este patrón si tu librería es pequeña:**  
     Importar desde submódulos específicos, como `from sklearn.cluster import KMeans`, obliga al usuario a memorizar en qué submódulo vive cada cosa — algo justificado en librerías enormes, pero innecesario y complejo si la tuya es pequeña. Expón todo desde el `__init__.py` y permite simplemente `from mi_libreria import KMeans`.
