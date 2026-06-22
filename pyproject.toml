@@ -1,9 +1,21 @@
 [project]
 name = "c2-core"
-version = "0.1.0"
+version = "0.3.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
     "mkdocs-material>=9.7.6",
+]
+
+[tool.commitizen]
+name = "cz_conventional_commits"
+version = "0.3.0"
+version_files = ["pyproject.toml:version"]
+tag_format = "v$version"
+update_changelog_on_bump = true
+
+[dependency-groups]
+dev = [
+    "commitizen>=4.16.3",
 ]

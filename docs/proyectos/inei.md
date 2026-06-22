@@ -10,19 +10,25 @@ https://github.com/MaykolMedrano/enahodata_py
 Tecnologías utilizadas, etc (por ejemplo, si uno usa solicitudes http o selenium)
 
 ## Por implementar
-- Optimización de tiempo de descarga
-  - Sesión AJAX? (Más rápido aparentemente)
-  - Httpx? Asincronía? (Más rápido que requests, pero menos que una sesión)
 
-- Organización de archivos al descargar?
-  - Mantener solo data o también pdf
-  - Guardar en carpetas? O flat?
+### Rendimiento en descargas
+- [ ] Evaluar sesión AJAX (aparentemente más rápido)
+- [ ] Evaluar `httpx` con asincronía (más rápido que `requests`, más lento que AJAX)
 
-- Api más intuitiva?
-  - Muchas funciones para importar
-  
-- Dependencia de pandas
-  - Si solo es una librería de descargas, la única dependencia debería ser requests y tqdm
-- 
-- Documentación
-- Librería base y a partir de ello otras librerías derivadas?
+### Organización de archivos
+- [ ] Definir qué guardar: ¿solo data o también PDFs?
+- [ ] Definir estructura: ¿carpetas por categoría o flat?
+
+### API
+- [ ] Reducir funciones a importar — la API actual requiere demasiadas importaciones
+
+### Dependencias
+- [ ] Si el scope es solo descargas, las únicas dependencias deberían ser `requests` y `tqdm` (eliminar `pandas`)
+
+### Documentación
+- [ ] Redactar documentación base
+
+### Arquitectura
+- [ ] Evaluar separar en librería base + librerías derivadas por fuente
+
+## Público objetivo
