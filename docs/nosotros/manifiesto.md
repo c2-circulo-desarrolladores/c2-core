@@ -1,4 +1,4 @@
-# Manifiesto — Círculo de Desarrolladores Open Source (C2)
+# Manifiesto
 
 ## ¿Qué es C2?
 
