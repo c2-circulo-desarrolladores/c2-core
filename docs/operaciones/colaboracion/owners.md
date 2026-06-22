@@ -1,55 +1,56 @@
 # Owners
 
-<!--Hablar de
-- Responsabilidades de owners
-- codeowners dentro de .github
-- Permisos y reglas (no push a main a menos que el owner dé review)-->
-- 
 Los owners de un proyecto se deciden de antemano a través del círculo, y se formalizan mediante el archivo `.github/CODEOWNERS`.
 
-## CODEOWNERS
+## ¿Qué significa ser Owner de un repositorio?
 
-CODEOWNERS es una funcionalidad de GitHub que permite definir quiénes son los responsables 
-de revisar cambios en determinadas partes del repositorio.
+Significa ser el principal punto de contacto del repo. Es quien revisar las contribuciones y define el roadmap.
 
-Cuando un Pull Request modifica archivos incluidos en CODEOWNERS, GitHub solicita automáticamente revisión a los usuarios o equipos asignados.
+El círculo puede co-mantener con el owner, proponer cambios de dirección o asumir responsabilidades si el owner lo necesita.
 
 ### Responsabilidades de los owners
 
-Los owners son responsables de:
-
-- Revisar los cambios realizados en los archivos bajo su responsabilidad.
-- Aprobar o solicitar correcciones antes del merge.
+- Aprobar o solicitar correcciones antes del merge de Pull Requests.
 - Mantener la calidad y consistencia del código de su área.
+- Seguir y hacer cumplir el workflow de colaboración en su repositorio:
+  - No hacer push directo a `main`.
+  - Seguir el [workflow de colaboración de Git](git_workflow.md)
+  - Seguir el [workflow de Github](github.md)
+  - Seguir [conventional commits](conventional_commits.md)
+  
+## CODEOWNERS
 
-### Ubicación
+CODEOWNERS es una funcionalidad de GitHub que permite definir quiénes son los responsables de revisar cambios en determinadas partes del repositorio.
 
-El archivo suele ubicarse en:
+Estar en CODEOWNERS no implica "propiedad" del código, sino interés y responsabilidad de revisión sobre esa parte del proyecto.
+
+Cuando un Pull Request modifica archivos incluidos en CODEOWNERS, GitHub solicita automáticamente revisión a los usuarios asignados.
+
+El archivo se define en:
 
 `.github/CODEOWNERS`
 
 ### Ejemplos
 
-Ejemplo mínimo
-```CODEOWNERS
-# Responsable de todo el repositorio
-* @luis-cieza-silva
-```
-
-De [polars](https://github.com/pola-rs/polars/blob/main/.github/CODEOWNERS): 
+#### Ejemplo mínimo:
 
 ```CODEOWNERS
 # Responsable de todo el repositorio
-*  @ritchie46 @c-peters
-
-# Responsables de partes del repositorio
-/crates/  @ritchie46 @orlp @c-peters
-/crates/polars-sql/  @ritchie46 @orlp @c-peters @alexander-beedie
-/crates/polars-parquet/  @ritchie46 @orlp @c-peters @coastalwhite
-/crates/polars-time/  @ritchie46 @orlp @c-peters @MarcoGorelli
-/crates/polars-python/  @ritchie46 @c-peters @alexander-beedie @MarcoGorelli @reswqa
-/crates/polars-python/src/lazyframe/visit.rs  @ritchie46 @c-peters @alexander-beedie @MarcoGorelli @reswqa @wence- @Matt711
-/crates/polars-python/src/lazyframe/visitor/  @ritchie46 @c-peters @alexander-beedie @MarcoGorelli @reswqa @wence- @Matt711
-/py-polars/  @ritchie46 @c-peters @alexander-beedie @MarcoGorelli @reswqa
+* @usuario1 @usuario2
 ```
 
+#### Ejemplos reales:
+
+En **[cpython](>https://github.com/python/cpython/blob/main/.github/CODEOWNERS)**— el intérprete oficial de Python — la responsabilidad se distribuye por módulo y entre varios colaboradores:
+
+```CODEOWNERS
+# GitHub & related scripts
+.github/             @ezio-melotti @hugovk @AA-Turner @webknjaz
+
+# Asyncio
+Lib/asyncio/         @1st1 @asvetlov @kumaraditya303 @willingc
+
+# Typing
+Lib/typing.py            @JelleZijlstra @AlexWaygood
+Lib/test/test_typing.py  @JelleZijlstra @AlexWaygood
+```
