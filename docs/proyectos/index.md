@@ -1,9 +1,11 @@
 # Proyectos
 
-Esta sección contiene propuestas de proyectos
+Esta sección contiene propuestas de proyectos y mapeo de librerías existentes.
 
-- [inei](./inei.md) 
-- [seace](./seace.md) 
-- [consulta_amigable](./consulta_amigable.md) 
-- [sunat](./sunat.md) 
+## Índice
 
+- [inei](./inei.md)
+- [consulta_amigable](./consulta_amigable.md)
+- [bcrp](./bcrp.md)
+- [seace](./seace.md)
+- [sunat](./sunat.md)
