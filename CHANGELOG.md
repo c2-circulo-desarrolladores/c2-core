@@ -1,3 +1,11 @@
+## v0.3.1 (2026-06-22)
+
+### Fix
+
+- Añadir release yml a github_actions
+
+## v0.1.0 (2026-06-06)
+
 ## v0.3.0 (2026-06-21)
 
 ### Feat
