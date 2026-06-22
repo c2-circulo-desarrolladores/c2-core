@@ -12,7 +12,7 @@ hide:
 
 Desarrollamos, colaboramos y mantenemos librerías Open Source para el ecosistema peruano.
 
-[Conoce el círculo](manifiesto.md){ .md-button .md-button--primary }
+[Conoce el círculo](nosotros/manifiesto.md){ .md-button .md-button--primary }
 [Ver en GitHub](https://github.com/c2-circulo-desarrolladores/c2-core){ .md-button }
 </div>
 
