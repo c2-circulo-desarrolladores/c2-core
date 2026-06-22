@@ -1,5 +1,5 @@
 site_name: C2 - Círculo de Desarrolladores Open Source
-site_url: https://mydomain.org/landing
+site_url: https://c2-circulo-desarrolladores.github.io/c2-core/
 theme:
   features:
     - content.code.copy
