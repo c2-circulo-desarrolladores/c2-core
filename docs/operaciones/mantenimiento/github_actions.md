@@ -51,6 +51,47 @@ jobs:
         run: uvx autoflake --check --remove-unused-variables --remove-all-unused-imports -r . --exclude "__init__.py"
 ```
 
+## Releases
+
+```yml
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+
+      - name: Install dependencies
+        run: uv sync
+
+      - name: Get changelog
+        id: changelog
+        run: |
+          uv run cz changelog --dry-run > /tmp/changelog.md
+          echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
+          cat /tmp/changelog.md >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+
+      - name: Create release
+        uses: softprops/action-gh-release@v2
+        with:
+          body: ${{ steps.changelog.outputs.CHANGELOG }}
+```
+
 ## Issue Templates
 
 ## Pull Request Templates
