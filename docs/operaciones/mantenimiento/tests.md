@@ -4,7 +4,7 @@
 
 A medida que una librería crece, es común reorganizar módulos, optimizar algoritmos o modificar implementaciones internas. Una suite de pruebas bien construida permite realizar estos cambios con confianza: si los tests siguen pasando, sabemos que el comportamiento público de la librería permanece intacto.
 
-Por ello, en muchos proyectos open source, los tests se consideran una parte tan importante como el propio código fuente.  
+Para proyectos open source, los tests se consideran una parte tan importante como el propio código fuente.  
 
 En Python, la herramienta más utilizada para testear código es **pytest**.
 
@@ -17,7 +17,7 @@ dependencias dev.
 uv add --dev pytest
 ```
 
-Comienza creando una carpeta `test/` en el root de tu repositorio (al mismo nivel del README.md). Dentro de crea archivos llamados `test_*.py` y define funciones de prueba.  
+Comienza creando una carpeta `test/` en el root de tu repositorio (al mismo nivel del README.md). Dentro, crea archivos llamados `test_*.py` y define funciones de prueba.  
 
 Este código iría dentro de `test/test_calculadora.py`:
 
