@@ -32,6 +32,11 @@ test(auth): add login tests
 
 Los scopes son opcionales, pero ayuda a dar mayor información sobre partes del código que fueron afectadas.
 
+## Integración con commitizen
+
+En Python, la librería `commitizen` aprovecha la sintaxis de conventional commits para el versionado semántico y para generar changelogs. Más en el [siguiente enlace](../mantenimiento/versionamiento.md#)
+
+
 Para verificar commits con [commitlint](https://github.com/conventional-changelog/commitlint):
 `.github/workflows/commitlint.yml`
 
