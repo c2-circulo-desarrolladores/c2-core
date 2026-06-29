@@ -3,21 +3,21 @@ site_url: https://c2-circulo-desarrolladores.github.io/c2-core/
 theme:
   features:
     - content.code.copy
-    - content.code.annotate        # anotaciones en código tipo callouts
-    - navigation.tabs              # tabs en la barra superior para secciones principales
-    - navigation.tabs.sticky       # tabs fijos al hacer scroll
-    - navigation.sections          # expande secciones en el sidebar
-    - navigation.expand            # sidebar expandido por defecto
-    - navigation.path              # breadcrumbs arriba de cada página
-    - navigation.top               # botón "volver arriba"
-    - navigation.indexes           # usa index.md como página de cada sección
-    - search.highlight             # resalta términos buscados en la página
-    - search.suggest               # autocompletado en búsqueda
-    - toc.follow                   # el TOC lateral sigue el scroll
+    - content.code.annotate # anotaciones en código tipo callouts
+    - navigation.tabs # tabs en la barra superior para secciones principales
+    - navigation.tabs.sticky # tabs fijos al hacer scroll
+    - navigation.sections # expande secciones en el sidebar
+    - navigation.expand # sidebar expandido por defecto
+    - navigation.path # breadcrumbs arriba de cada página
+    - navigation.top # botón "volver arriba"
+    - navigation.indexes # usa index.md como página de cada sección
+    - search.highlight # resalta términos buscados en la página
+    - search.suggest # autocompletado en búsqueda
+    - toc.follow # el TOC lateral sigue el scroll
   name: material
   font:
     text: Montserrat
-    code: JetBrains Mono 
+    code: JetBrains Mono
   palette:
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
@@ -31,18 +31,18 @@ markdown_extensions:
       pygments_lang_class: true
   - pymdownx.inlinehilite
   - pymdownx.superfences
-  - pymdownx.tabbed:              # tabs dentro del contenido (ej: Python / R)
+  - pymdownx.tabbed: # tabs dentro del contenido (ej: Python / R)
       alternate_style: true
-  - pymdownx.details              # bloques colapsables (??? note)
-  - pymdownx.emoji:               # íconos :material-check: dentro del texto
+  - pymdownx.details # bloques colapsables (??? note)
+  - pymdownx.emoji: # íconos :material-check: dentro del texto
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - admonition                    # cajas tipo !!! note, !!! warning
+  - admonition # cajas tipo !!! note, !!! warning
   - toc:
-      permalink: true             # ancla # en cada título
+      permalink: true # ancla # en cada título
       title: Contenido
-  - attr_list                     # clases CSS en elementos Markdown
-  - md_in_html                    # Markdown dentro de HTML
+  - attr_list # clases CSS en elementos Markdown
+  - md_in_html # Markdown dentro de HTML
   - tables
 
 # Navigation
@@ -51,6 +51,7 @@ nav:
   - "Nosotros":
       - "Manifiesto": "nosotros/manifiesto.md"
       - "Gobernanza": "nosotros/governanza.md"
+      - "Lineamientos": "nosotros/lineamientos.md"
   - "Proyectos":
       - "Index": "proyectos/index.md"
       - "Consulta amigable": "proyectos/consulta_amigable.md"
@@ -67,16 +68,19 @@ nav:
           - "Buenas prácticas": "operaciones/codigo/buenas_practicas.md"
           - "Extensiones": "operaciones/codigo/extensiones.md"
           - "uv": "operaciones/codigo/uv.md"
+          - "c2-cli": "operaciones/codigo/c2-cli.md"
       - "Colaboración":
           - "Configurar Git": "operaciones/colaboracion/git_config.md"
           - "Workflow de Git": "operaciones/colaboracion/git_workflow.md"
           - "Workflow de Github": "operaciones/colaboracion/github_workflow.md"
           - "Conventional Commits": "operaciones/colaboracion/conventional_commits.md"
+          - "Issues": "operaciones/colaboracion/issues.md"
           - "Owners": "operaciones/colaboracion/owners.md"
       - "Mantenimiento":
           - "Github Actions": "operaciones/mantenimiento/github_actions.md"
           - "Release Drafter": "operaciones/mantenimiento/release_drafter.md"
           - "Versionamiento": "operaciones/mantenimiento/versionamiento.md"
+          - "Publicación": "operaciones/mantenimiento/publicacion.md"
           - "Tests": "operaciones/mantenimiento/tests.md"
   # - "Plantillas":
   #     - "Fundamentals": "plantillas/fundamentals.md"
@@ -105,6 +109,6 @@ extra:
         - icon: material/emoticon-sad-outline
           name: This page could be improved
           data: 0
-          note: >- 
+          note: >-
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
