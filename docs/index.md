@@ -23,7 +23,7 @@ Desarrollamos, colaboramos y mantenemos librerías Open Source para el ecosistem
 
 ## Misión
 
-Desarrollar **librerías de Python** que faciliten el acceso a fuentes de datos peruanas, automaticen flujos de trabajo en investigación y promuevan buenas prácticas en el desarrollo de software.
+Desarrollar **librerías open source** que faciliten el acceso a fuentes de datos peruanas, automaticen flujos de trabajo en investigación y promuevan buenas prácticas en el desarrollo de software.
 
 </div>
 <div class="mv-block" markdown>
