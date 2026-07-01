@@ -78,7 +78,7 @@ nav:
           - "Owners": "operaciones/colaboracion/owners.md"
       - "Mantenimiento":
           - "Github Actions": "operaciones/mantenimiento/github_actions.md"
-          - "Release Drafter": "operaciones/mantenimiento/release_drafter.md"
+          - "Releases": "operaciones/mantenimiento/releases.md"
           - "Versionamiento": "operaciones/mantenimiento/versionamiento.md"
           - "Publicación": "operaciones/mantenimiento/publicacion.md"
           - "Tests": "operaciones/mantenimiento/tests.md"
@@ -112,3 +112,11 @@ extra:
           note: >-
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
+
+plugins:
+  - search
+  - git-revision-date-localized:
+      type: timeago # o "date" si prefieres fecha fija
+      enable_creation_date: true
+      fallback_to_build_date: true
+      locale: es
