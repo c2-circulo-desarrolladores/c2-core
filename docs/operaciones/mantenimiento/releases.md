@@ -72,7 +72,7 @@ Al hacerse push del nuevo tag (`v0.2.0`, `v0.2.1`, `v1.0.0`, etc.), el workflow 
 
 ## Workflow de release
 
-La publicación de releases está completamente automatizada gracias a [este workflow de Github Actions](github_actions#releases).
+La publicación de releases está completamente automatizada gracias a [este workflow de Github Actions](github_actions.md#releases).
 
 Una vez activado:
 
