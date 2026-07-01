@@ -6,7 +6,7 @@ https://github.com/TJhon/PyPeruStats
 https://github.com/MaykolMedrano/enahodata_py
 
 ## Qué hace cada proyecto base
-
+Falta
 Tecnologías utilizadas, etc (por ejemplo, si uno usa solicitudes http o selenium)
 
 ## Por implementar

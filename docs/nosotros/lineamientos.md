@@ -2,7 +2,6 @@
 
 ## Herramientas antes de empezar a trabajar
 - Usamos [uv](../operaciones/codigo/uv.md) como gestor de dependencias
-- Usamos un justfile (incluir una entrada para esto)
 - Usamos [c2-cli](../operaciones/codigo/uv.md) para inicializar proyectos
 - Es necesario tener conocimientos de [git](../operaciones/colaboracion/git_workflow.md) para empezar a colaborar.
 
