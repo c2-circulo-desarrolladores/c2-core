@@ -53,7 +53,7 @@ jobs:
 
 ## Releases
 
-```yml
+```yaml
 name: Release
 
 on:
@@ -81,7 +81,12 @@ jobs:
       - name: Get changelog
         id: changelog
         run: |
-          uv run cz changelog --dry-run > /tmp/changelog.md
+          PREV_TAG=$(git describe --tags --abbrev=0 "${GITHUB_REF_NAME}^" 2>/dev/null || echo "")
+          if [ -n "$PREV_TAG" ]; then
+            uv run cz changelog --dry-run "$PREV_TAG..${GITHUB_REF_NAME}" > /tmp/changelog.md
+          else
+            uv run cz changelog --dry-run > /tmp/changelog.md
+          fi
           echo "CHANGELOG<<EOF" >> $GITHUB_OUTPUT
           cat /tmp/changelog.md >> $GITHUB_OUTPUT
           echo "EOF" >> $GITHUB_OUTPUT
@@ -91,6 +96,55 @@ jobs:
         with:
           body: ${{ steps.changelog.outputs.CHANGELOG }}
 ```
+
+## Test
+
+```yaml
+name: Run Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    name: 🧪 Test (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        python-version: ["3.9", "3.10", "3.11", "3.12"]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v6
+
+      - name: Set up Python
+        run: uv python install ${{ matrix.python-version }}
+
+      - name: Sync dependencies
+        run: uv sync --extra dev
+
+      - name: Run pre-commit hooks
+        run: uv run pre-commit run --all-files
+
+      - name: Run tests
+        run: uv run pytest -v --maxfail=1 --disable-warnings --cov --cov-report=term
+
+      - name: Upload coverage
+        if: success()
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./coverage.xml
+          fail_ci_if_error: false
+```
+
 
 ## Issue Templates
 

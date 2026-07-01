@@ -22,11 +22,11 @@ Código -> Colaboración -> Mantenimiento
 
 ## Misión - ¿Qué hacemos?
 
-Desarrollamos **librerías de Python** con los siguientes fines:
+Desarrollamos **librerías open source** con los siguientes fines:
 
 - Contribuir al acceso programático a portales peruanos (INEI, MEF, etc.).
 - Automatizar y estandarizar flujos de trabajo en la investigación académica y el análisis de datos en el Perú.
-- Promover buenas prácticas en el desarrollo de software.
+- Promover estándares y buenas prácticas en el desarrollo de librerías.
 
 ## Visión - ¿Qué aspiramos?
 

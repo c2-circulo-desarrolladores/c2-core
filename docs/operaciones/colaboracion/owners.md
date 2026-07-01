@@ -2,6 +2,8 @@
 
 Los owners de un proyecto se deciden de antemano a través del círculo, y se formalizan mediante el archivo `.github/CODEOWNERS`.
 
+Los owners se definen por voluntad propia a partir de cuánto tiempo y responsabilidad le pueden dedicar al proyecto.
+
 ## ¿Qué significa ser Owner de un repositorio?
 
 Significa ser el principal punto de contacto del repo. Es quien revisar las contribuciones y define el roadmap.
@@ -29,6 +31,9 @@ Cuando un Pull Request modifica archivos incluidos en CODEOWNERS, GitHub solicit
 El archivo se define en:
 
 `.github/CODEOWNERS`
+
+Para agregar a un usuario dentro del archivo, se usa la siguiente sintaxis:
+`@nombre_de_usuario_github`
 
 ### Ejemplos
 
