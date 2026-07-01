@@ -1,6 +1,8 @@
 site_name: C2 - Círculo de Desarrolladores Open Source
 site_url: https://c2-circulo-desarrolladores.github.io/c2-core/
 theme:
+  name: material
+  custom_dir: docs/overrides
   features:
     - content.code.copy
     - content.code.annotate # anotaciones en código tipo callouts
@@ -14,7 +16,6 @@ theme:
     - search.highlight # resalta términos buscados en la página
     - search.suggest # autocompletado en búsqueda
     - toc.follow # el TOC lateral sigue el scroll
-  name: material
   font:
     text: Montserrat
     code: JetBrains Mono
