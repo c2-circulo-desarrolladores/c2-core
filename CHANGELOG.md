@@ -1,3 +1,22 @@
+## v0.4.0 (2026-07-01)
+
+### Feat
+
+- **ops**: Añadir entrada de releases, actualizar release.yml e hipervínculos (closes #20)
+- **ops**: Añadir entrada de releases, actualizar release.yml e hipervínculos
+- **ops**: Añadir entrada de versionamiento
+- **ops**: Añadir redireccionamiento a c2-cli
+- **ops**: Agregar apartado de issues y actualizar github workflow
+- **prj**: Mejorar apartado de proyecto consulta amigable
+- **nosotros**: Añadir primer boceto de lineamientos
+
+### Fix
+
+- mejorar fraseo de la misión
+- la misión es desarrollar librerías de código abierto, no necesariamente de Python
+- **mant**: Pequeñas mejoras en la redacción e incorporar retroalimentación
+- **ops**: Pequeñas mejoras en la redacción
+
 ## v0.3.3 (2026-06-22)
 
 ### Fix
