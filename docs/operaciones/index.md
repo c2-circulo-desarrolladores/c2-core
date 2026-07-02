@@ -28,7 +28,6 @@ Código -> Colaboración -> Mantenimiento
 - Para **crear pruebas (tests)** seguimos esta [guía](mantenimiento/tests.md)
 - Para **versionar**, seguimos esta [guía](mantenimiento/versionamiento.md)
 - Para **crear releases**, seguimos esta [guía](mantenimiento/releases.md)
-- Para **hacer lanzamientos descriptivos**, utilizamos un [release drafter](mantenimiento/release_drafter.md)
 
 ### Literatura adicional
 https://opensource.guide/
