@@ -18,13 +18,12 @@ git tag v0.1.0
 git push origin v0.1.0
 ```
 
-Se empieza con `v0.1.0` porque es la primera versión al ejecutar `uv init`. 
-
+Se empieza con `v0.1.0` porque es la primera versión al ejecutar `uv init`.
 La convención `0.x.x` indica que el proyecto todavía no posee una API estable y puede atravesar cambios importantes antes de llegar a `1.0.0`.
 
 ## Releases posteriores
 
-Una vez que existe al menos una release, el flujo de trabajo es diferente:
+Una vez que existe al menos una release, el flujo de trabajo es el siguiente:
 
 1. Crear una rama de trabajo.
 
@@ -48,27 +47,29 @@ git push -u origin T101
 4. Revisar y aprobar el Pull Request.
 
 5. Cambiar y actualizar la rama `main`.
-   
+
 ```bash
 git switch main
-git pull origin main --rebase
+git pull --rebase
 ```
 
-6. Generar la siguiente versión desde `main`.
+6. Ejecutar el bump de versión.
 
 ```bash
 uv run cz bump
 ```
 
-Commitizen determinará automáticamente si corresponde un bump patch, minor o major, actualizará la versión del proyecto y creará el tag correspondiente. Si deseas hardcodear, se puede hacer de la siguiente manera:
+Commitizen analizará automáticamente los commits realizados desde el último tag para determinar si corresponde un incremento **patch**, **minor** o **major** (según los tipos de commit: `fix` → patch, `feat` → minor y `BREAKING CHANGE` → major). Luego actualizará la versión del proyecto, creará el commit y el nuevo tag. Finalmente, los *post bump hooks* regenerarán `CHANGELOG.md`, crearán el commit correspondiente y publicarán tanto los commits como el nuevo tag mediante `git push --follow-tags`.
 
-7. Publicar el commit de release y el nuevo tag.
+Si deseas forzar manualmente el tipo de incremento, puedes utilizar:
 
 ```bash
-git push --follow-tags
+uv run cz bump --increment MAJOR
+uv run cz bump --increment MINOR
+uv run cz bump --increment PATCH
 ```
 
-Al hacerse push del nuevo tag (`v0.2.0`, `v0.2.1`, `v1.0.0`, etc.), el workflow de GitHub Actions se ejecutará automáticamente.
+Al hacer push del nuevo tag (`v0.2.0`, `v0.2.1`, `v1.0.0`, etc.), el workflow de GitHub Actions se ejecutará automáticamente.
 
 ## Workflow de release
 
@@ -77,9 +78,9 @@ La publicación de releases está completamente automatizada gracias a [este wor
 Una vez activado:
 
 1. Obtiene el historial completo del repositorio.
-2. Instala las dependencias del proyecto.
+2. Instala las dependencias del proyecto (incluyendo git-cliff).
 3. Busca el tag anterior.
-4. Genera un changelog con los cambios entre ambas versiones mediante Commitizen.
+4. Genera un changelog con los cambios entre ambas versiones mediante **git-cliff**, usando la configuración de `cliff.toml`.
 5. Crea la release en GitHub utilizando ese changelog como descripción.
 
-El resultado es un proceso completamente automatizado: los commits determinan la versión, la versión genera un tag y el tag produce la release correspondiente en GitHub.
+El resultado es un proceso completamente automatizado: los commits determinan la versión (vía Commitizen), la nueva versión genera un tag, git-cliff documenta los cambios entre tags y el tag produce la release correspondiente en GitHub.
