@@ -7,13 +7,13 @@ Utilizamos git como sistema de control de versiones.
 ![Workflow básico](../../_images/git_workflow_basico.png)
 
 
-### 3: Ver estado actual del repositorio
-Mira información importante, como la rama actual, los cambios en los archivos, los cambios añadidos al área de preparación, los archivos nuevos, los archivos borrados, etc.
+### 1: Ver estado actual del repositorio
+Recuerda siempre comenzar con este comando para revisar información importante, como la rama actual, los cambios en los archivos, los cambios añadidos al área de preparación, los archivos nuevos, los archivos borrados, etc.
 ```shell
 git status
 ```
 
-### 4: Agregar archivos al área de preparación
+### 2: Agregar archivos al área de preparación
 Agregar uno o varios archivos específicos
 ```shell
 git add README.md
@@ -31,19 +31,17 @@ Agregar solo archivos modificados y eliminados (actualización de cambios).
 git add -u
 ```
 
-### 5: Commit de los cambios
-Se guarda los cambios incluyendo un mensaje descriptivo.
+### 3: Commit de los cambios
+Se guardan los cambios, incluyendo un mensaje descriptivo.
+
 ```shell
-git commit -m "Agrega archivo README.md y X archivos"
+git commit -m "chore: Agrega archivo README.md y X archivos"
 ```
+!!! note
+    Recuerda que en C2 es obligatorio utilizar [Conventional Commits](conventional_commits.md)
 
 
-### 9: Sube los cambios al repositorio remoto en GitHub
-La rama master del repositorio local se renombra por main
-```shell
-git branch -M main
-```
-
+### 4: Sube los cambios al repositorio remoto en GitHub
 Se envía los cambios a GitHub
 ```shell
 git push -u origin main
@@ -51,14 +49,28 @@ git push -u origin main
 !!! note
     Luego de primer commit, basta con utilizar `git push`.
 
+!!! warning
+    Recuerda renombrar la rama master por main si no viene por defecto con el siguiente comando:
+    ```shell
+    git branch -M main
+    ```
+
+
 ## Reparar errores
-### 1: Ver estado actual del repositorio
+### Ver estado actual del repositorio
 Recuerda siempre comenzar con `git status` para ver información importante, como la rama actual, los cambios en los archivos, los cambios añadidos al área de preparación, los archivos nuevos, los archivos borrados, etc.
 ```shell
 git status
 ```
 
-### 6: Retirar un archivo del área de preparación
+### Enmendar el mensaje del último commit
+Si te equivocaste en el mensaje de tu último commit y no lo has pusheado aún, siempre se puede enmendar con el flag `--amend`.
+
+```shell
+git commit --amend -m "feat: Nuevo mensaje"
+```
+
+### Retirar un archivo del área de preparación
 Se crea un archivo y se agrega al área de preparación.
 Como ejemplo, creamos un archivo "Nota.txt"
 ```shell
@@ -66,26 +78,16 @@ git echo "Recordatorio ..." > Nota.txt
 git add Nota.txt
 ```
 
-Se retira del área de preparación.
+Se retira del área de preparación (staging area)
 ```shell
 git reset Nota.txt
 ```
 
-### Quitar del staging area
-```shell
-git reset README.md
-```
 !!! warning
     Se puede utilizar también `git restore --staged [archivo]`. No obstante, recordar que olvidar el flag `--staged` hará que git no solo quite el archivo del área de preparación, sino que que también reestablecerá el archivo desde el último commit, sin forma de recuperar los cambios.
 
-### Enmendar el mensaje del último commit
-Si te equivocaste en el mensaje de tu último commit y no lo has pusheado aún, siempre se puede enmendar con el flag `--amend` o `-a`.
-
-```shell
-git commit -a -m "Nuevo mensaje"
-```
 ### Traer de vuelta un commit enviado 
-Si hiciste push a un commit, puedes regresarlo al área de preparación con el siguiente comando:
+Si hiciste push a un commit, puedes regresar los archivos commiteados al área de preparación con el siguiente comando:
 
 ```shell
 git reset --soft HEAD~1

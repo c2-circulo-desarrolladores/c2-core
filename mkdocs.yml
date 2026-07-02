@@ -81,6 +81,7 @@ nav:
           - "Github Actions": "operaciones/mantenimiento/github_actions.md"
           - "Releases": "operaciones/mantenimiento/releases.md"
           - "Versionamiento": "operaciones/mantenimiento/versionamiento.md"
+          - "Changelogs": "operaciones/mantenimiento/changelogs.md"
           - "Publicación": "operaciones/mantenimiento/publicacion.md"
           - "Tests": "operaciones/mantenimiento/tests.md"
   # - "Plantillas":
