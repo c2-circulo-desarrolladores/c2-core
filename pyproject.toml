@@ -1,6 +1,6 @@
 [project]
 name = "c2-core"
-version = "0.5.0"
+version = "0.5.1"
 description = "Add your description here"
 readme = "README.md"
 requires-python = ">=3.12"
@@ -18,6 +18,6 @@ dev = [
 
 [tool.commitizen]
 name = "cz_conventional_commits"
-version = "0.5.0"
+version = "0.5.1"
 version_files = ["pyproject.toml:version"]
 tag_format = "v$version"
