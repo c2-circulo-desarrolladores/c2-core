@@ -28,6 +28,7 @@ Código -> Colaboración -> Mantenimiento
 - Para **crear pruebas (tests)** seguimos esta [guía](mantenimiento/tests.md)
 - Para **versionar**, seguimos esta [guía](mantenimiento/versionamiento.md)
 - Para **crear releases**, seguimos esta [guía](mantenimiento/releases.md)
+- Para **crear changelogs**, seguimos esta [guía](mantenimiento/changelogs.md)
 
 ### Literatura adicional
 https://opensource.guide/
