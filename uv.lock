@@ -35,10 +35,9 @@ wheels = [
 
 [[package]]
 name = "c2-core"
-version = "0.4.0"
+version = "0.5.0"
 source = { virtual = "." }
 dependencies = [
-    { name = "git-cliff" },
     { name = "mkdocs-git-revision-date-localized-plugin" },
     { name = "mkdocs-material" },
 ]
@@ -46,17 +45,20 @@ dependencies = [
 [package.dev-dependencies]
 dev = [
     { name = "commitizen" },
+    { name = "git-cliff" },
 ]
 
 [package.metadata]
 requires-dist = [
-    { name = "git-cliff", specifier = ">=2.13.1" },
     { name = "mkdocs-git-revision-date-localized-plugin", specifier = ">=1.5.3" },
     { name = "mkdocs-material", specifier = ">=9.7.6" },
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "commitizen", specifier = ">=4.16.3" }]
+dev = [
+    { name = "commitizen", specifier = ">=4.16.3" },
+    { name = "git-cliff", specifier = ">=2.13.1" },
+]
 
 [[package]]
 name = "certifi"
