@@ -2,6 +2,8 @@
 
 Esta sección contiene propuestas de proyectos y mapeo de librerías existentes.
 
+La plantilla de ideas de proyectos se encuentra [aquí](template.md)
+
 ## Índice
 
 - [inei](./inei.md)

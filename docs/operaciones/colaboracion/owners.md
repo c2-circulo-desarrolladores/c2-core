@@ -46,7 +46,7 @@ Para agregar a un usuario dentro del archivo, se usa la siguiente sintaxis:
 
 #### Ejemplos reales:
 
-En **[cpython](>https://github.com/python/cpython/blob/main/.github/CODEOWNERS)**— el intérprete oficial de Python — la responsabilidad se distribuye por módulo y entre varios colaboradores:
+En **[cpython](https://github.com/python/cpython/blob/main/.github/CODEOWNERS)**— el intérprete oficial de Python — la responsabilidad se distribuye por módulo y entre varios colaboradores:
 
 ```CODEOWNERS
 # GitHub & related scripts

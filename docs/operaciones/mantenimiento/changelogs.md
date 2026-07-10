@@ -9,7 +9,7 @@ Se observa en el archivo `CHANGELOG.md`, que se encuentra en el root del reposit
 En este proyecto, el changelog se genera automáticamente mediante **git-cliff**, una herramienta que analiza el historial de commits del repositorio y los organiza según las reglas definidas en `cliff.toml`. 
 
 !!! note
-    git-cliff se añade como dependencia al ejecutar `c2 init`. Más información [aquí](../../codigo/c2-cli.md).
+    git-cliff se añade como dependencia al ejecutar `c2 init`. Más información [aquí](../../codigo/c2-cli).
 
 Gracias al uso de **Conventional Commits**, git-cliff clasifica automáticamente los cambios en categorías como **Features**, **Bug Fixes**, **Documentation**, **Refactor** y otras, generando un `CHANGELOG.md` consistente y fácil de mantener.
 

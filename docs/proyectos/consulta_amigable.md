@@ -14,9 +14,8 @@ Asimismo, gran parte del análisis de gasto se realiza con software estadístico
 
 ## Impacto
 
-## Ejecución
-### Proyectos base
-#### [PyPeruStats](https://github.com/TJhon/PyPeruStats)
+## Proyectos base
+### [PyPeruStats](https://github.com/TJhon/PyPeruStats)
 Ventajas:
 - API intuitiva y familiar.
 - 
@@ -25,7 +24,7 @@ Desventajas:
 - Bundled con librerías para otras páginas, la hace pesada
 - Evaluar uso de httpx 
 
-#### [Web-Scraping-Consulta-Amigable-MEF](https://github.com/AlexEvanan/Web-Scraping-Consulta-Amigable-MEF)
+### [Web-Scraping-Consulta-Amigable-MEF](https://github.com/AlexEvanan/Web-Scraping-Consulta-Amigable-MEF)
 - Uso de Selenium/Playwright para abrir un navegador, grabar los clicks del usuario (como una macro) y generar un .yml con datos de la ruta que se pueden replicar para otros años.
 Ventajas:
 - Low-code: código ya escrito, el usuario solo tendría que grabar la macro y 
@@ -33,7 +32,7 @@ Desventajas:
 - Dependencias pesadas que no se pueden bundle fácilmente a PyPi.
 - Playwright scrapea de manera inconsistente (a veces hace click antes de cargar la página)
 
-#### En R
+### En R
 https://github.com/rnicolasmr1998/Web_Scraping_Consulta_Amigable_MEF/tree/main/02_Script
 https://github.com/calderonsamuel/consulta_amigable_universidades
 
