@@ -1,3 +1,26 @@
+## [0.6.0] - 2026-07-10
+
+### 🚀 Features
+
+- **(ops)** Terminar entrada de uv (closes #39)
+- **(prj)** Añadir plantilla para ideas de proyectos
+- **(general)** Añadir overrides para ver la versión de la página y la fecha de modificación de entradas
+
+### 💼 Other
+
+- Version 0.5.1 → 0.6.0
+
+### 🎨 Styling
+
+- **(prj)** Arreglar formato de consulta_amigable
+
+### ⚙️ Miscellaneous Tasks
+
+- Cliff.toml ignores changelog-related commits
+- Arreglar urls de owners y changelogs
+- Actualizar changelog
+- **(prj)** Añadir ideas de proyectos
+
 ## [0.5.1] - 2026-07-02
 
 ### 🐛 Bug Fixes
@@ -12,6 +35,7 @@
 
 ### ⚙️ Miscellaneous Tasks
 
+- **(changelog)** Update changelog
 - Updates mkdocs.yml
 - Uses git-cliff to create changelog
 
