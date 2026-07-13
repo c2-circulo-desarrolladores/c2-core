@@ -6,6 +6,12 @@ En corto, **uv** crea y gestiona un entorno virtual (`.venv`) a partir de las de
 
 Documentación oficial [aquí](https://docs.astral.sh/uv/)
 
+Para instalarlo desde Windows:
+
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+
 ## Por qué usar `uv`
 
 - **Velocidad**: escrito en Rust, resuelve e instala dependencias considerablemente más rápido que `pip`.
@@ -34,23 +40,22 @@ uv init
 uv add [libreria]
 ```
 
-### Ejecutar el proyecto
+### Ejecutar código
 
 ```shell
 uv sync
-```
-
-```shell
-uv run
+uv run [path/a/tu/script.py]
 ```
 
 !!! warning "Sincronización"
-    Si clonas el repo o cambias de rama, siempre corre `uv sync` antes de trabajar — evita instalar dependencias manualmente y previene desincronización con el `uv.lock`.
+    Si has clonado o actualizado tu repo, recuerda correr `uv sync` para actualizar las dependencias instaladas.
 
 
 ## Hatchling
 
-**Hatchling** es lo que le permite a `uv` construir e instalar tu propio código como un paquete de Python. Al ejecutar `uv sync`, tu código se instalará como paquete dentro de tu `.venv`, y podrás importarlo fuera de la carpeta `src/`. Este bloque lo agrega automáticamente el comando `init` de [`c2-cli`](c2-cli.md) a tu `pyproject.toml`:
+**Hatchling** es el motor que le permite a `uv` construir e instalar tu propio código como un paquete de Python. Al ejecutar `uv sync`, tu código se instalará como paquete dentro de tu `.venv`, y podrás importarlo fuera de la carpeta `src/`. 
+
+Este bloque lo agrega automáticamente el comando `init` de **[`c2-cli`]**(c2-cli.md) a tu `pyproject.toml`:
 
 ```toml
 [build-system]
@@ -60,6 +65,3 @@ build-backend = "hatchling.build"
 [tool.hatch.build.targets.wheel]
 packages = ["src/{package_name}"]
 ```
-
-!!! tip "En corto"
-    Sin este bloque, `uv sync` solo instala tus dependencias. Con él, tu propia librería también se instala en el `.venv` y puedes importarla como cualquier otro paquete.
