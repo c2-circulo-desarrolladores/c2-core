@@ -55,3 +55,9 @@ jobs:
 
       - uses: wagoid/commitlint-github-action@v6
 ```
+
+## Cómo escribir buenos mensajes de commit
+
+- Empezar con un verbo en infinitivo (ej: actualizar, agregar, corregir...)
+- Hacer commits frecuentes, no 'monster commits". Piensa en que, si deseas revertir una funcionalidad, si se tiene un commit gigante, se revertirá funcionalidad no relacionada.
+- Explicar qué es lo que hace el cambio, no qué es lo que hiciste tú (optimizar lectura de datos)
