@@ -30,8 +30,12 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-  - pymdownx.inlinehilite
-  - pymdownx.superfences
+  # - pymdownx.inlinehilite
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed: # tabs dentro del contenido (ej: Python / R)
       alternate_style: true
   - pymdownx.details # bloques colapsables (??? note)
@@ -53,6 +57,7 @@ nav:
       - "Manifiesto": "nosotros/manifiesto.md"
       - "Gobernanza": "nosotros/governanza.md"
       - "Lineamientos": "nosotros/lineamientos.md"
+      - "Lineamientos IA": "nosotros/lineamientos_ia.md"
   - "Proyectos":
       - "Index": "proyectos/index.md"
       - "Consulta amigable": "proyectos/consulta_amigable.md"
@@ -60,6 +65,7 @@ nav:
       - "SEACE": "proyectos/seace.md"
       - "SUNAT": "proyectos/sunat.md"
       - "BCRP": "proyectos/bcrp.md"
+      - "Template": "proyectos/template.md"
   - "Operaciones":
       - "Index": "operaciones/index.md"
       - "Codigo":
