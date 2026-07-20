@@ -8,7 +8,7 @@ Gracias al uso de **Conventional Commits**, herramientas como `git-cliff` clasif
 
 ## Cómo generar Changelogs
 
-Con [c2-cli](../../codigo/c2-cli.md), el `CHANGELOG.md` se actualiza automáticamente al ejecutar `c2 release`: cada nueva versión suma sus commits al archivo sin intervención manual.
+Con [c2-cli](../codigo/c2-cli.md), el `CHANGELOG.md` se actualiza automáticamente al ejecutar `c2 release`: cada nueva versión suma sus commits al archivo sin intervención manual.
 
 Por debajo, `c2 release` usa **git-cliff**, una herramienta que analiza el historial de commits del repositorio y los organiza según las reglas definidas en `cliff.toml`.
 
