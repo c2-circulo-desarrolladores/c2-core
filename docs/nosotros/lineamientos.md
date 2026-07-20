@@ -8,9 +8,9 @@ El flujo de desarrollo completo se describe en el apartado de [Operaciones](../o
 
 ## Herramientas antes de empezar a trabajar
 - Es necesario tener conocimientos de [git](../operaciones/colaboracion/git_workflow.md) para empezar a colaborar.
-- Usamos [c2-cli](../operaciones/codigo/uv.md) para inicializar proyectos y crear lanzamientos (releases).
-- Seguimos [conventional-commits](../operaciones/colaboracion/conventional_commits.md) para nuestros mensajes de commit y generar el [CHANGELOG.md](../operaciones/mantenimiento/changelogs.md).
+- Usamos [c2-cli](../operaciones/codigo/c2-cli.md) para inicializar proyectos y crear lanzamientos (releases).
 - Usamos [uv](../operaciones/codigo/uv.md) como gestor de dependencias.
+- Seguimos [conventional-commits](../operaciones/colaboracion/conventional_commits.md) para nuestros mensajes de commit y generar el [CHANGELOG.md](../operaciones/mantenimiento/changelogs.md).
 
 ## Inicializar un nuevo proyecto
 
