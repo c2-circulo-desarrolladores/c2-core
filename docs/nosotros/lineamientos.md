@@ -1,45 +1,44 @@
-# Lineamientos
+# Lineamientos para desarrollar proyectos
+
+Este documento es el punto de entrada para el desarrollo de nuevos proyectos en C2, siguiendo los estándares y convenciones del equipo. 
+
+Un **proyecto** es cualquier repositorio desarrollado dentro de [la organización C2](https://github.com/c2-circulo-desarrolladores), ccomo una librería, una aplicación, una API, un CLI u otro tipo de software.
+
+El flujo de desarrollo completo se describe en el apartado de [Operaciones](../operaciones/index.md). Aquí se presenta una guía rápida de los lineamientos y herramientas necesarios para iniciar un proyecto.
 
 ## Herramientas antes de empezar a trabajar
-- Usamos [uv](../operaciones/codigo/uv.md) como gestor de dependencias
-- Usamos [c2-cli](../operaciones/codigo/uv.md) para inicializar proyectos
 - Es necesario tener conocimientos de [git](../operaciones/colaboracion/git_workflow.md) para empezar a colaborar.
+- Usamos [c2-cli](../operaciones/codigo/uv.md) para inicializar proyectos y crear lanzamientos (releases).
+- Seguimos [conventional-commits](../operaciones/colaboracion/conventional_commits.md) para nuestros mensajes de commit y generar el [CHANGELOG.md](../operaciones/mantenimiento/changelogs.md).
+- Usamos [uv](../operaciones/codigo/uv.md) como gestor de dependencias.
 
-## Cómo crear un nuevo proyecto
+## Inicializar un nuevo proyecto
 
 1. Creas un nuevo repositorio en la organización con un README vacío.
-2. Dentro del README, colocar los nombres de los participantes en una sección
-3. Cada sección debería contar con
-  - El url del repositorio
-  - Una descripción corta del proyecto en general (overview).
-  - Una descripción corta de los módulos y clases
-  - (Opcional) Una meta u objetivo específico, propio de este repositorio
-4. Finalizar con una sección con una meta conjunta para el nuevo repositorio
+2. Ejecutar `c2 init` para inicializar el repositorio con los archivos necesarios y hacer el commit inicial.
+3. Dentro del README, colocar el [siguiente template](../proyectos/template.md) y rellenar los campos.
 
-## Colaboración
+## Configuración del proyecto
 
-- Para establecer owners, escribir el archivo [CODEOWNERS](../operaciones/colaboracion/owners.md)
+Hay un par de configuraciones necesarias que se deben aplicar luego de incializar el proyecto.
+
+- Escribir el archivo [CODEOWNERS](../operaciones/colaboracion/owners.md)
 - Licencia MIT (discutir)
 - Crear [Proyectos](../operaciones/colaboracion/github_projects.md)
 - Aplicar protección a la rama main (solo los owners deberían mergear a main).
 
 ## Ramas
+- No es necesario trabajar sobre ramas en la fase temprana del proyecto, pero sí una vez que se empiece a poblar la carpeta `src/`.
 - Antes de crear una rama, debe existir un issue sobre la tarea que se va a trabajar (creado por cuenta propia o asignado) 
 - Se debe crear la rama utilizando la siguiente sintaxis: c-#issue (por ejemplo: c-11)
 - Eliminar la rama después de mergearla
 
-
 ## Documentación
 - En español, opcionalmente en inglés (si se puede con Mkdocs)
 
-No es necesario trabajar sobre ramas en esta parte inicial. Si es así, hacer git pull.
-
 Ejemplo: https://github.com/c2-circulo-desarrolladores/BCRP
 
+### Dependencias
 
+#### Datos
 
-Rama
-Cómo colaborar
-
-
-### Librerías
