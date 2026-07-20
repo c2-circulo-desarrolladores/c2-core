@@ -1,3 +1,34 @@
+## [0.7.0] - 2026-07-20
+
+### 🚀 Features
+
+- **(ops)** Añadir sección de Cómo escribir buenos commits
+- **(nosotros)** En lineamientos, añadir más herramientas necesarias antes de trabajar y configuraciones
+- **(mantenimiento)** Terminar entrada de github actions con urls a c2-cli
+
+### 🐛 Bug Fixes
+
+- **(ops)** Añadir comando para instalar uv y simplificar explicación
+- **(mantenimiento)** Mejoras a la entrada de changelogs
+- **(mantenimiento)** Corregir enlace en changelogs
+
+### 💼 Other
+
+- **(changelog)** Update changelog"
+- Version 0.6.0 → 0.7.0
+
+### 🎨 Styling
+
+- Añadir diagramas de mermaid
+- **(ops)** Pequeños cambios de estilo en uv y conventional commits
+
+### ⚙️ Miscellaneous Tasks
+
+- Actualizar uv.lock
+- Actualizar versiones de dependencias
+- **(index)** Actualizar índice
+- **(nosotros)** Corregir enlaces en lineamientos
+
 ## [0.6.0] - 2026-07-10
 
 ### 🚀 Features
