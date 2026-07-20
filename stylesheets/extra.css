@@ -1,0 +1,310 @@
+/* ════════════════════════════════════════════════════════════
+   VARIABLES
+════════════════════════════════════════════════════════════ */
+:root > * {
+  --md-primary-fg-color:        #ac001d;
+  --md-primary-fg-color--light: #ECB7B7;
+  --md-primary-fg-color--dark:  #90030C;
+
+  --color-secondary:            #4B6480;
+  --color-secondary-light:      #7a9ab8;
+  --color-secondary-dark:       #243446;
+
+  --color-bg:                   #000010;
+  --color-bg-surface:           #05051a;  /* cards, elementos elevados */
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   FONDOS
+════════════════════════════════════════════════════════════ */
+[data-md-color-scheme="slate"] body {
+  background-color: #0d0d0d !important;
+}
+
+[data-md-color-scheme="slate"] .md-main,
+[data-md-color-scheme="slate"] .md-content {
+  background-color: var(--color-bg) !important;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   TIPOGRAFÍA
+════════════════════════════════════════════════════════════ */
+[data-md-color-scheme="slate"] .md-content h1,
+[data-md-color-scheme="default"] .md-content h1 {
+  font-weight: 600 !important;
+  font-size: 1.9rem;
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .md-content h2,
+[data-md-color-scheme="default"] .md-content h2 {
+  font-weight: 600 !important;
+  font-size: 1.4rem;
+  color: #f5f5f5 !important;
+  border-left: 3px solid var(--color-secondary);
+  padding-left: 0.75rem;
+}
+
+[data-md-color-scheme="slate"] .md-content h3,
+[data-md-color-scheme="default"] .md-content h3 {
+  font-weight: 500 !important;
+  font-size: 1.1rem;
+  color: #e6e6e6 !important;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   SIDEBAR — ESTRUCTURA
+════════════════════════════════════════════════════════════ */
+[data-md-color-scheme="slate"] .md-sidebar--primary {
+  padding-left: 0 !important;
+}
+
+[data-md-color-scheme="slate"] .md-sidebar__scrollwrap {
+  padding: 0 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav--primary {
+  padding: 0 !important;
+}
+
+[data-md-color-scheme="slate"] .md-nav__container {
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   SIDEBAR — LABELS DE SECCIÓN (Codigo, Colaboración...)
+════════════════════════════════════════════════════════════ */
+[data-md-color-scheme="slate"] label.md-nav__link[id^="__nav"],
+[data-md-color-scheme="default"] label.md-nav__link[id^="__nav"] {
+  font-weight: 700 !important;
+  font-size: 0.72rem !important;
+  letter-spacing: 0.1em !important;
+  text-transform: uppercase !important;
+  opacity: 1 !important;
+  color: #1a1a2e !important;
+}
+
+[data-md-color-scheme="slate"] label.md-nav__link[id^="__nav"] {
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] label.md-nav__link[id^="__nav"] .md-nav__icon,
+[data-md-color-scheme="default"] label.md-nav__link[id^="__nav"] .md-nav__icon {
+  opacity: 1 !important;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   SIDEBAR — LINKS
+════════════════════════════════════════════════════════════ */
+[data-md-color-scheme="slate"] a.md-nav__link,
+[data-md-color-scheme="default"] a.md-nav__link {
+  color: var(--color-secondary-light) !important;
+  border-radius: 5px !important;
+  padding: 5px 12px !important;
+  margin: 1px 4px !important;
+  transition: background 0.15s ease, color 0.15s ease !important;
+}
+
+[data-md-color-scheme="slate"] a.md-nav__link:hover,
+[data-md-color-scheme="default"] a.md-nav__link:hover {
+  background: rgba(75, 100, 128, 0.12) !important;
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] a.md-nav__link--active {
+  background: rgba(75, 100, 128, 0.20) !important;
+  color: #ffffff !important;
+}
+
+/* Sección raíz activa (sin resaltado) */
+[data-md-color-scheme="slate"] .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav__link,
+[data-md-color-scheme="slate"] .md-nav--primary > .md-nav__list > .md-nav__item--active > .md-nav__link:hover {
+  background: transparent !important;
+  color: var(--color-secondary-light) !important;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   TABS SUPERIORES
+════════════════════════════════════════════════════════════ */
+[data-md-color-scheme="slate"] .md-tabs__item--active .md-tabs__link {
+  background: rgba(75, 100, 128, 0.15) !important;
+  border-radius: 5px !important;
+  color: #ffffff !important;
+}
+
+[data-md-color-scheme="slate"] .md-tabs__link:hover {
+  background: rgba(75, 100, 128, 0.08) !important;
+  border-radius: 5px !important;
+  color: var(--color-secondary-light) !important;
+  opacity: 1 !important;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   HERO
+════════════════════════════════════════════════════════════ */
+.hero,
+.hero-fade {
+  position: relative;
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  color: white;
+  border: 1px solid rgba(75, 100, 128, 0.2);
+  overflow: hidden;
+}
+
+.hero {
+  background: linear-gradient(160deg, #0a0a1a 0%, #12051a 50%, #0d0005 100%);
+}
+
+.hero-fade {
+  background: #0a0a1a; /* fallback mientras carga la imagen */
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero h1,
+.hero-fade h1 {
+  font-size: 2.8rem;
+  color: white !important;
+  margin-bottom: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero p,
+.hero-fade p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+  z-index: 2;
+}
+
+/* Imagen de fondo del hero-fade */
+.hero-fade .hero-image {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  transition: opacity 0.1s linear, transform 0.1s linear;
+  will-change: opacity, transform;
+}
+
+/* Overlay oscuro para que el texto sea legible sobre la imagen */
+.hero-fade::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(10,10,26,0.85) 0%, rgba(18,5,26,0.75) 50%, rgba(13,0,5,0.85) 100%);
+  z-index: 1;
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   CARDS
+════════════════════════════════════════════════════════════ */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin: 2rem 0;
+}
+
+.card {
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid var(--color-secondary-dark);
+  background: var(--color-bg-surface);
+  transition: box-shadow 0.2s, border-color 0.2s;
+}
+
+.card:hover {
+  box-shadow: 0 4px 20px rgba(75, 100, 128, 0.25);
+  border-color: var(--color-secondary);
+}
+
+
+/* ════════════════════════════════════════════════════════════
+   MISIÓN / VISIÓN
+════════════════════════════════════════════════════════════ */
+.mision-vision {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.mv-block {
+  position: relative;
+  flex: 1 1 340px;
+  max-width: 480px;
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  background: linear-gradient(160deg, #14141f 0%, #1c1c2a 100%);
+  border: 1px solid rgba(179, 19, 44, 0.25);
+  text-align: center;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.mv-block::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  padding: 1px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #b3132c, transparent 60%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.mv-block:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(179, 19, 44, 0.25);
+  border-color: rgba(179, 19, 44, 0.5);
+}
+
+.mv-icon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  filter: drop-shadow(0 0 10px rgba(179, 19, 44, 0.5));
+}
+
+.mv-block h2 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  margin: 0 0 1.25rem;
+  color: #fff;
+  border: none;
+}
+
+.mv-block {
+  padding: 1.5rem 1.5rem;
+}
+
+.mv-block h2::after {
+  content: "";
+}
+
+.md-button {
+  font-size: 1rem;
+  padding: 0.6em 1.5em;
+}
