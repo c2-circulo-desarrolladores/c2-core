@@ -57,6 +57,7 @@ nav:
       - "Manifiesto": "nosotros/manifiesto.md"
       - "Gobernanza": "nosotros/governanza.md"
       - "Lineamientos": "nosotros/lineamientos.md"
+      - "Lineamientos IA": "nosotros/lineamientos_ia.md"
   - "Proyectos":
       - "Index": "proyectos/index.md"
       - "Consulta amigable": "proyectos/consulta_amigable.md"
@@ -64,6 +65,7 @@ nav:
       - "SEACE": "proyectos/seace.md"
       - "SUNAT": "proyectos/sunat.md"
       - "BCRP": "proyectos/bcrp.md"
+      - "Template": "proyectos/template.md"
   - "Operaciones":
       - "Index": "operaciones/index.md"
       - "Codigo":
