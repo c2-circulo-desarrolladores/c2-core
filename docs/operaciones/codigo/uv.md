@@ -6,10 +6,17 @@ En corto, **uv** crea y gestiona un entorno virtual (`.venv`) a partir de las de
 
 Documentación oficial [aquí](https://docs.astral.sh/uv/)
 
-Para instalarlo desde Windows:
+Para instalarlo:
+
+=== "Windows"
 
 ```powershell
-powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+    powershell -c "irm https://astral.sh/uv/install.ps1 | iex"
+```
+=== "macOS/Linux"
+
+```bash
+    curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ## Por qué usar `uv`

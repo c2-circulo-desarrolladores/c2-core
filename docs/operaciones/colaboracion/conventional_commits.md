@@ -15,12 +15,14 @@ Tiene como fin de crear un historial de commits explícito y sencillo de leer, a
 | 🧹 **chore** | Tareas de mantenimiento que no afectan directamente la funcionalidad del sistema. Incluye cambios en dependencias, configuración, herramientas de desarrollo, scripts, CI/CD o limpieza del repositorio. | `chore(ci): update GitHub Actions` |
 | 🎨 **style** | Cambios relacionados con formato, estilo o presentación del código que no modifican su lógica ni comportamiento. Incluye ajustes de indentación, espacios, saltos de línea, ordenamiento de imports, formateo automático y convenciones de estilo. | `style(api): format code with ruff` |
 | ♻️ **refactor** | Reestructuración o mejora interna del código sin modificar su comportamiento observable. No agrega funcionalidades ni corrige errores. | `refactor(parser): simplify validation logic` |
-| 🧪 **test** | Adición, modificación o eliminación de pruebas automatizadas. No cambia el comportamiento del producto. | `test(auth): add login tests` |
 | 📚 **docs** | Cambios únicamente en documentación, comentarios, guías, README, manuales o material de referencia. | `docs(readme): update installation guide` |
+| 🧪 **test** | Adición, modificación o eliminación de pruebas automatizadas. No cambia el comportamiento del producto. | `test(auth): add login tests` |
 
 ## Scopes
 
-Opcionalmente, la categoría va acompañada del scope: un paréntesis que indica qué parte del proyecto fue afectada. Algunos ejemplos:
+Opcionalmente, la categoría va acompañada del scope: un paréntesis que indica qué parte del proyecto fue afectada. 
+
+Algunos ejemplos:
 
 ```
 feat(api): add search endpoint
@@ -34,8 +36,7 @@ Los scopes son opcionales, pero ayuda a dar mayor información sobre partes del 
 
 ## Integración con commitizen
 
-En Python, la librería `commitizen` aprovecha la sintaxis de conventional commits para el versionado semántico y para generar changelogs. Más en el [siguiente enlace](../mantenimiento/versionamiento.md#)
-
+En Python, la librería `commitizen` aprovecha la sintaxis de conventional commits para el versionado semántico. Más en el [siguiente enlace](../mantenimiento/versionamiento.md#)
 
 Para verificar commits con [commitlint](https://github.com/conventional-changelog/commitlint):
 `.github/workflows/commitlint.yml`
@@ -59,5 +60,5 @@ jobs:
 ## Cómo escribir buenos mensajes de commit
 
 - Empezar con un verbo en infinitivo (ej: actualizar, agregar, corregir...)
-- Hacer commits frecuentes, no 'monster commits". Piensa en que, si deseas revertir una funcionalidad, si se tiene un commit gigante, se revertirá funcionalidad no relacionada.
+* Realiza commits frecuentes y enfocados en un único cambio. Evita los *monster commits* que agrupan múltiples funcionalidades o modificaciones no relacionadas. Un commit pequeño es más fácil de revisar, probar y revertir. Si en el futuro necesitas deshacer una funcionalidad, podrás hacerlo sin afectar cambios independientes incluidos en el mismo commit.
 - Explicar qué es lo que hace el cambio, no qué es lo que hiciste tú (optimizar lectura de datos)
